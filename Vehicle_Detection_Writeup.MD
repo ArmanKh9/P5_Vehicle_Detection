@@ -34,7 +34,7 @@ The dataset of images are split into training (80%) and test (20%) data set. All
 ## 5- Using Sliding Window method in order to scan each frame by multiple boxes and detect whether the box contains a car in it or not by using the trained model in step 4
 
 The `find_cars` method is a sliding window that scans each image/frame and feed it into the SVC model that was trained in the last step. The SVC make the prediction. If it predeicts a car in a window, the method visualized the corresponding window by drawing a rectangle on its borders. The method outputs an image that has boxes or rectangles around the detected cars. This method is also similar to the method used in the project lesson. The required window sizes were found by testing variety of window scales (from 1.0 to 4.0) on `find_cars` method. It was found that the window scale parameter can be ranged from 1.0 to 3.0. These scales used in the video pipeline to scane each frame with multiple window sizes. The area of the search in each image in this project is limited to lower portion of the image where other cars appear.
-Below is exmples of a processed image by this method for different sliding window sizes.
+Below is exmples of a processed image by this method for different sliding window sizes of 1.0, 1.5 and 2.5, respectively.
 
 ![Sliding Window Result Scale 1.0](./output_images/sliding1.0_sample.png)
 
@@ -56,6 +56,9 @@ The `add_heat` method creates a heatmap of the image with detected cars. Then lo
 
 The pipeline `car_position` performs all the above steps on each video frame. In addition to the steps, it scans each frame with multiple window sizes to detect cars at various distance. The function stores a list of the detected boxes in the last 5 frames and feed them into the steps in order to provide a car detection through the video. Please find the output video as `Project_Video_Output.mp4` in the project repository. 
 
+Here is a link to the video:
+
+[a link](https://github.com/ArmanKh9/P5_Vehicle_Detection/blob/master/project_video_processed.mp4)
 
 
 ## Discussion

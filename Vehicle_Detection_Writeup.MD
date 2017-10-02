@@ -58,7 +58,7 @@ The pipeline `car_position` performs all the above steps on each video frame. In
 
 Here is a link to the video:
 
-[a link](https://github.com/ArmanKh9/P5_Vehicle_Detection/blob/master/project_video_processed.mp4)
+[Output Video Link](https://github.com/ArmanKh9/P5_Vehicle_Detection/blob/master/project_video_processed.mp4)
 
 
 ## Discussion
